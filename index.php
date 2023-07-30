@@ -18,7 +18,8 @@
 
     <?php get_header(); ?>
 
+   <!-- Main Content -->
     
-    <?php wp_footer(); ?>
+    <?php get_footer(); ?>
 </body>
 </html>

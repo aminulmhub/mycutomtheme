@@ -7,7 +7,7 @@
 
                     <!-- Template Logo -->
                     <div class="template-branding">
-                        <a href="/" class="template-logo">
+                        <a href="<?php echo home_url(); ?>" class="template-logo">
                             <img src="<?php echo get_theme_mod('header_logo'); ?>" alt="Site Logo" />
                         </a>
                     </div>
@@ -17,7 +17,7 @@
                             <div class="d-flex align-items-center justify-content-between">
                                 <!-- sidebar logo -->
                                 <div class="sidebar-logo">
-                                    <a href="/" class="template-logo">
+                                    <a href="<?php echo home_url(); ?>" class="template-logo">
                                         <img src="<?php echo get_theme_mod('header_logo') ?>" alt="Site Logo" />
                                     </a>
                                 </div>
