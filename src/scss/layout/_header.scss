@@ -391,3 +391,18 @@
     }
 
 }
+
+// Setting left menu
+.left_menu .template-menu{
+    flex-direction: row-reverse;
+}
+.left_menu .nav-menu{
+    margin-left: unset !important;
+    margin-right: auto;
+}
+.left_menu .nav-right ul{
+    padding-left: 0;
+}
+.left_menu .nav-toggle-btn{
+    margin-left: 0 !important;
+}

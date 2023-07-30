@@ -1,5 +1,5 @@
 <!-- Start Header -->
-<header class="template-header">
+<header class="template-header <?php echo get_theme_mod('menu_position'); ?>">
         <div class="template-navigation">
             <div class="nav-overlay"></div>
             <div class="container-fluid p-0">
@@ -7,7 +7,7 @@
 
                     <!-- Template Logo -->
                     <div class="template-branding">
-                        <a href="index.html" class="template-logo">
+                        <a href="/" class="template-logo">
                             <img src="<?php echo get_theme_mod('header_logo'); ?>" alt="Site Logo" />
                         </a>
                     </div>
@@ -17,7 +17,7 @@
                             <div class="d-flex align-items-center justify-content-between">
                                 <!-- sidebar logo -->
                                 <div class="sidebar-logo">
-                                    <a href="index.html" class="template-logo">
+                                    <a href="/" class="template-logo">
                                         <img src="<?php echo get_theme_mod('header_logo') ?>" alt="Site Logo" />
                                     </a>
                                 </div>
@@ -34,45 +34,20 @@
 
                         <!-- Nav Menu -->
                         <nav class="main-menu">
-                            <ul>
-                                <li class="menu-item">
-                                    <a href="#home">Home</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#features">Features</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#portfolio">Portfolio</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#resume">Resume</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#clients">Clients</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#pricing">Pricing</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#blog">Blog</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#contactID">Contact</a>
-                                </li>
-                            </ul>
+                            <?php wp_nav_menu(array('theme_location' => 'main_menu', 'menu_id' => 'main_menu')); ?>
                         </nav>
 
                         <!-- Social Link -->
                         <div class="d-xl-none social_links_wrap">
                             <span class="sub_title">Find with me</span>
                             <div class="social_links">
-                                <a href="#" class="shade_box btn_primary">
+                                <a href="<?php echo get_theme_mod('facebook_link'); ?>" class="shade_box btn_primary">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a>
-                                <a href="#" class="shade_box btn_primary">
+                                <a href="<?php echo get_theme_mod('instagram_link'); ?>" class="shade_box btn_primary">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
-                                <a href="#" class="shade_box btn_primary">
+                                <a href="<?php echo get_theme_mod('linkedin_link'); ?>" class="shade_box btn_primary">
                                     <i class="fa-brands fa-linkedin-in"></i>
                                 </a>
                             </div>

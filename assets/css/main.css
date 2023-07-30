@@ -231,6 +231,7 @@ body .section-title .title {
   left: 0;
   right: 0;
   z-index: 999;
+  -webkit-animation: sticky 0.5s;
   animation: sticky 0.5s;
   box-shadow: 10px 10px 19px rgba(0, 0, 0, 0.1);
   height: 90px;
@@ -242,6 +243,7 @@ body .section-title .title {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   visibility: hidden;
   opacity: 0;
@@ -251,8 +253,14 @@ body .section-title .title {
   opacity: 1;
 }
 .template-header .template-navigation .template-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .template-header .template-navigation .template-menu .nav-menu {
@@ -309,6 +317,8 @@ body .section-title .title {
   display: none;
 }
 .template-header .template-navigation .template-menu .nav-right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 .template-header .template-navigation .template-menu .nav-right .btn_cta {
@@ -335,6 +345,7 @@ body .section-title .title {
   height: 3px;
   margin-bottom: 6px;
   padding: 0;
+  -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
   width: 30px;
   cursor: pointer;
@@ -344,6 +355,7 @@ body .section-title .title {
   margin-bottom: 0;
 }
 .template-header .template-navigation .template-menu .nav-right ul li.nav-toggle-btn .navbar-toggler.active span:nth-of-type(1) {
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
   transform: rotate3d(0, 0, 1, 45deg);
   top: 8px;
 }
@@ -351,6 +363,7 @@ body .section-title .title {
   opacity: 0;
 }
 .template-header .template-navigation .template-menu .nav-right ul li.nav-toggle-btn .navbar-toggler.active span:nth-of-type(3) {
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
   transform: rotate3d(0, 0, 1, -45deg);
   top: -10px;
 }
@@ -363,8 +376,10 @@ body .section-title .title {
   z-index: 9999;
   width: 300px;
   height: 100%;
+  -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
   padding: 0;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   display: block;
   overflow-x: hidden;
@@ -399,11 +414,13 @@ body .section-title .title {
   position: relative;
   top: 0;
   left: 0 !important;
+  -webkit-box-shadow: none;
   box-shadow: none;
   background-color: transparent;
   visibility: visible;
   opacity: 1;
   display: none;
+  -webkit-transition: none;
   transition: none;
 }
 .template-header .template-navigation.mobile-breakpoint-on .template-menu .nav-menu .main-menu ul li .sub-menu li a {
@@ -494,6 +511,23 @@ body .section-title .title {
   }
 }
 
+.left_menu .template-menu {
+  flex-direction: row-reverse;
+}
+
+.left_menu .nav-menu {
+  margin-left: unset !important;
+  margin-right: auto;
+}
+
+.left_menu .nav-right ul {
+  padding-left: 0;
+}
+
+.left_menu .nav-toggle-btn {
+  margin-left: 0 !important;
+}
+
 /* Footer */
 .footer .footer-area {
   text-align: center;
@@ -570,6 +604,8 @@ body .section-title .title {
   content: "";
   left: 50%;
   bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   background: linear-gradient(145deg, #e2e8ec, #ffffff);
   border-radius: 6px;
@@ -687,8 +723,7 @@ body .section-title .title {
   width: 100%;
   transition: 0.4s;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .portfolio .portfolio_item .inner .content {
   padding-top: 18px;
@@ -1062,8 +1097,7 @@ body .section-title .title {
   height: auto;
   transition: 0.4s;
   display: inline-block !important;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
 }
 .clients .swiper .swiper-wrapper .swiper-slide .inner .card-info .card-content .subtitle {
@@ -1580,8 +1614,7 @@ body .section-title .title {
   width: 100%;
   transition: 0.4s;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .blog .blog_item .inner .content {
   padding-top: 18px;
@@ -1772,4 +1805,4 @@ body .section-title .title {
 
 /*----------------------------------
 	~~~ Pages ~~~
------------------------------------ *//*# sourceMappingURL=style.css.map */
+----------------------------------- *//*# sourceMappingURL=main.css.map */
