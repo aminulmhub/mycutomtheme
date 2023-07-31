@@ -25,7 +25,9 @@ function theme_css_js()
     wp_enqueue_script('jquery');
     // bootstrap js
     wp_enqueue_script('bootstrap_js', get_template_directory_uri() . "/assets/vendors/bootstrap/js/bootstrap.bundle.min.js", array(), "5.3.0", 'true');
+    // main js
     wp_enqueue_script('main_js', get_template_directory_uri() . "/assets/js/main.js", array(), "1.0.0", 'true');
+
 }
 
 add_action("wp_enqueue_scripts", 'theme_css_js');
@@ -35,7 +37,7 @@ add_action("wp_enqueue_scripts", 'theme_css_js');
 function custom_theme_customizer($wp_customize){
     // HEADER //
     $wp_customize->add_section('header_area', array(
-        'title' => __('Header Setting', 'aminulislam'),
+        'title' => __('Header Setting', 'textdomain'),
         'description' => 'Change header content'
     ));
     // logo
@@ -75,7 +77,7 @@ function custom_theme_customizer($wp_customize){
 
     // FOOTER //
     $wp_customize->add_section('footer_area', array(
-        'title' => __('Footer Setting', 'aminulislam'),
+        'title' => __('Footer Setting', 'textdomain'),
     ));
     // logo
     $wp_customize->add_setting('footer_logo', array(
@@ -117,35 +119,81 @@ function custom_theme_customizer($wp_customize){
 
     // SOCIAL LINKS //
     $wp_customize->add_section('social_links', array(
-        'title' => __('Social Settings', 'aminulislam'),
+        'title' => __('Social Settings', 'textdomain'),
         'description' => 'Add Social Links'
     ));
-
+    // facebook
     $wp_customize->add_setting('facebook_link', array(
         'default' => '#'
     ));
-    $wp_customize->add_setting('instagram_link', array(
-        'default' => '#'
-    ));
-    $wp_customize->add_setting('linkedin_link', array(
-        'default' => '#'
-    ));
-
     $wp_customize->add_control('facebook_link', array(
         'label' => 'Add Facebook Link',
         'section' => 'social_links',
         'setting' => 'facebook_link'
+    ));
+    // instagram
+    $wp_customize->add_setting('instagram_link', array(
+        'default' => '#'
     ));
     $wp_customize->add_control('instagram_link', array(
         'label' => 'Add Instagram Link',
         'section' => 'social_links',
         'setting' => 'instagram_link'
     ));
+    // linkedin
+    $wp_customize->add_setting('linkedin_link', array(
+        'default' => '#'
+    ));
     $wp_customize->add_control('linkedin_link', array(
         'label' => 'Add Linkedin Link',
         'section' => 'social_links',
         'setting' => 'linkedin_link'
     ));
+
+
+    // BANNER //
+    $wp_customize->add_section('banner_area', array(
+        'title' => __('Banner Setting', 'textdomain'),
+        'description' => 'Change Banner content'
+    ));
+    // portfolio user name
+    $wp_customize->add_setting('portfolio_user', array(
+        'default' => 'John Smith'
+    ));
+    $wp_customize->add_control('portfolio_user', array(
+        'label' => 'Change portfolio user',
+        'section' => 'banner_area',
+        'setting' => 'portfolio_user'
+    ));
+    // portfolio user proffession
+    $wp_customize->add_setting('portfolio_proffession', array(
+        'default' => 'Frontend Developer'
+    ));
+    $wp_customize->add_control('portfolio_proffession', array(
+        'label' => 'Change Proffession',
+        'section' => 'banner_area',
+        'setting' => 'portfolio_proffession'
+    ));
+    // portfolio user description
+    $wp_customize->add_setting('portfolio_user_description', array(
+        'default' => "I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I'm not adding motion just to spruce things up, but doing it in ways that."
+    ));
+    $wp_customize->add_control('portfolio_user_description', array(
+        'label' => 'Change portfolio user  description',
+        'section' => 'banner_area',
+        'setting' => 'portfolio_user_description'
+    ));
+    // banner image
+    $wp_customize->add_setting('banner_img', array(
+        'default' => get_bloginfo('template_directory') . '/assets/images/banner-01.png',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'banner_img', array(
+        'label' => 'Change banner image',
+        'section' => 'banner_area',
+        'setting' => 'banner_img'
+    )));
+
+
 
 
 
@@ -155,7 +203,7 @@ add_action('customize_register', 'custom_theme_customizer');
 
 
 // Menu Register
-register_nav_menu('main_menu', __('Main Menu', 'aminulislam'));
+register_nav_menu('main_menu', __('Main Menu', 'textdomain'));
 
 
 // current year
