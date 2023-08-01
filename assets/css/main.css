@@ -209,6 +209,32 @@ body .section-title .title {
   margin-right: 15px;
 }
 
+.navigaton {
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 250px;
+  margin: 48px auto 0;
+}
+.navigaton .page_navigation {
+  text-align: center;
+}
+.navigaton .page_navigation .pages {
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dce1e4;
+}
+.navigaton .page_navigation .page-numbers {
+  padding: 6px 12px;
+  color: #ff014f;
+}
+.navigaton .page_navigation .page-numbers:hover {
+  color: #1e2125;
+}
+.navigaton .page_navigation .current {
+  color: #1e2125;
+}
+
 /*----------------------------------
 	~~~ Layout ~~~
 -----------------------------------*/
@@ -216,7 +242,6 @@ body .section-title .title {
 .template-header {
   width: 100%;
   z-index: 999;
-  position: absolute;
 }
 .template-header .template-navigation {
   padding: 0 64px;
@@ -707,7 +732,9 @@ body .section-title .title {
   .feature .feature_item {
     padding: 20px;
   }
-} /* Portfolio */
+}
+
+/* Portfolio */
 .portfolio .portfolio_item {
   padding: 30px;
   border-radius: 20px;
@@ -1599,37 +1626,43 @@ body .section-title .title {
 }
 
 /* Blog */
-.blog .blog_item {
+.blog_item {
   padding: 30px;
   border-radius: 20px;
   height: 100%;
   transition: 0.4s;
 }
-.blog .blog_item .inner .thumbnail a {
+.blog_item .inner .thumbnail a {
   display: block;
   overflow: hidden;
-  border-radius: 10px;
 }
-.blog .blog_item .inner .thumbnail a img {
+.blog_item .inner .thumbnail img {
   width: 100%;
   transition: 0.4s;
   height: auto;
   object-fit: cover;
+  border-radius: 10px;
 }
-.blog .blog_item .inner .content {
-  padding-top: 18px;
+.blog_item .inner .content {
+  padding-top: 20px;
 }
-.blog .blog_item .inner .content .category-info {
+.blog_item .inner .content .category-info {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
 }
-.blog .blog_item .inner .content .category-info .category-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+.blog_item .inner .content .category-info .category-list {
+  width: 100%;
 }
-.blog .blog_item .inner .content .category-info .category-list a {
+.blog_item .inner .content .category-info .category-list .post-categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog_item .inner .content .category-info .category-list a {
   color: #ff014f;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
@@ -1638,22 +1671,7 @@ body .section-title .title {
   text-transform: uppercase;
   display: block;
 }
-.blog .blog_item .inner .content .category-info .meta span {
-  color: #3c3e41;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  font-size: 13px;
-}
-.blog .blog_item .inner .content .category-info .meta span i {
-  margin-right: 2px;
-  transition: 0.4s;
-  color: #3c3e41;
-  padding: 4px;
-}
-.blog .blog_item .inner .content .category-info .meta span i:hover, .blog .blog_item .inner .content .category-info .meta span i:active {
-  color: #ff014f;
-}
-.blog .blog_item .inner .content .title a {
+.blog_item .inner .content .title a {
   color: #1e2125;
   transition: 0.4s;
   font-weight: 600;
@@ -1662,31 +1680,34 @@ body .section-title .title {
   display: inline-block;
   font-family: "Montserrat", sans-serif;
 }
-.blog .blog_item .inner .content .title a i {
+.blog_item .inner .content .title a i {
   color: #ff014f;
   padding-left: 6px;
   transition: 0.4s;
   display: none;
 }
-.blog .blog_item .inner .content .title a:hover {
+.blog_item .inner .content .title a:hover {
   color: #ff014f;
 }
-.blog .blog_item .inner .content .title a:hover i {
+.blog_item .inner .content .title a:hover i {
   display: inline-block;
   padding-left: 12px;
 }
-.blog .blog_item:hover .inner .thumbnail a img {
+.blog_item .inner .post_description {
+  margin-top: 24px;
+}
+.blog_item:hover .inner .thumbnail a img {
   transform: scale(1.1);
 }
+
 @media only screen and (max-width: 479px) {
-  .blog .blog_item {
+  .blog_item {
     padding: 20px;
   }
-  .blog .blog_item .inner .content .title a {
+  .blog_item .inner .content .title a {
     font-size: 20px;
   }
 }
-
 /* Contact */
 .contact .contact-about-area {
   padding: 30px;

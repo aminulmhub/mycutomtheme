@@ -5,7 +5,7 @@
                 <div class="col-lg-12">
                     <div class="footer-area">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="<?php echo home_url(); ?>">
                                 <img src="<?php echo get_theme_mod('footer_logo'); ?>" alt="logo">
                             </a>
                         </div>
@@ -19,3 +19,8 @@
         </div>
     </footer>
     <!-- End Footer Section -->
+
+    <?php wp_footer(); ?>
+
+    </body>
+</html>
