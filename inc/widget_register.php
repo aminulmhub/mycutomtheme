@@ -4,7 +4,7 @@
 function theme_widget_register(){
     register_sidebar(array(
         'name' => __('Main Widget', 'textdomain'),
-        'id' => 'archiveSidebar',
+        'id' => 'sidebar-1',
         'before_widget' => '<div class="child_sidebar">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="title">',

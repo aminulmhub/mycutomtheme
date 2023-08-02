@@ -48,6 +48,10 @@ body {
 body a {
   text-decoration: none;
   transition: 0.4s;
+  color: #1e2125;
+}
+body a:hover {
+  color: #ff014f;
 }
 body img {
   max-width: 100%;
@@ -150,7 +154,8 @@ body .section-title .title {
   ~~~ Components ~~~
 -----------------------------------*/
 /* Inputs */
-.btn_primary {
+.btn_primary,
+.wp-element-button {
   padding: 16px 18px;
   border-radius: 6px;
   color: #ff014f;
@@ -160,20 +165,61 @@ body .section-title .title {
   transition: 0.4s;
   border: none;
 }
-.btn_primary i {
+.btn_primary i,
+.wp-element-button i {
   font-size: 16px;
 }
-.btn_primary:hover, .btn_primary:active {
+.btn_primary:hover, .btn_primary:active,
+.wp-element-button:hover,
+.wp-element-button:active {
   transform: translateY(-3px);
   background: linear-gradient(145deg, #ff014f, #d11414);
   color: #fff;
 }
-.btn_primary:hover i, .btn_primary:active i {
+.btn_primary:hover i, .btn_primary:active i,
+.wp-element-button:hover i,
+.wp-element-button:active i {
   color: #fff;
+}
+
+.wp-element-button {
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
 }
 
 .btn_submit {
   width: 100%;
+}
+
+input {
+  background-color: #fff;
+  border: 2px solid #dce1e4 !important;
+  font-family: "Montserrat", sans-serif;
+  color: #3c3e41;
+  box-shadow: none;
+  width: 100%;
+  border-radius: 6px;
+  height: 55px;
+  transition: 0.4s;
+  padding: 0 15px !important;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+input:focus {
+  border-color: #ff014f !important;
+  outline: none;
+}
+
+label {
+  font-size: 12px;
+  color: #3c3e41;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 14px;
+  text-align: left;
+  display: block;
 }
 
 /* Cards */
@@ -209,29 +255,27 @@ body .section-title .title {
   margin-right: 15px;
 }
 
-.navigaton {
+.page_navigation {
   padding: 30px;
   border-radius: 20px;
   max-width: 250px;
   margin: 48px auto 0;
-}
-.navigaton .page_navigation {
   text-align: center;
 }
-.navigaton .page_navigation .pages {
+.page_navigation .pages {
   font-weight: 500;
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #dce1e4;
 }
-.navigaton .page_navigation .page-numbers {
+.page_navigation .page-numbers {
   padding: 6px 12px;
   color: #ff014f;
 }
-.navigaton .page_navigation .page-numbers:hover {
+.page_navigation .page-numbers:hover {
   color: #1e2125;
 }
-.navigaton .page_navigation .current {
+.page_navigation .current {
   color: #1e2125;
 }
 
@@ -551,6 +595,24 @@ body .section-title .title {
 
 .left_menu .nav-toggle-btn {
   margin-left: 0 !important;
+}
+
+/* Single page */
+.single .thumbnail img {
+  aspect-ratio: 1.7 !important;
+}
+
+/* sidebar */
+.sidebar .child_sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar .child_sidebar ul li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+.sidebar .child_sidebar:not(:last-of-type) {
+  margin-bottom: 24px;
 }
 
 /* Footer */
@@ -1642,6 +1704,7 @@ body .section-title .title {
   height: auto;
   object-fit: cover;
   border-radius: 10px;
+  aspect-ratio: 1.5;
 }
 .blog_item .inner .content {
   padding-top: 20px;

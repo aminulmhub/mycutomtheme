@@ -1,4 +1,4 @@
-<div class="navigaton shade_box">
+<div>
     <?php if ('page_navigation') {
         page_navigation();
     } else { ?>

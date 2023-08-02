@@ -5,7 +5,7 @@
     ?>
             <!-- Start Single blog -->
             <div class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 ">
-                <div class="blog_item shade_box" data-bs-toggle="modal" data-bs-target="#exampleModalCenters">
+                <div class="blog_item shade_box">
                     <div class="inner">
                         <div class="thumbnail">
                             <a href="<?php the_permalink(); ?>">

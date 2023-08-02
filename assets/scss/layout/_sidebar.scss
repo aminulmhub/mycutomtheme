@@ -1,0 +1,19 @@
+.sidebar{
+    .child_sidebar{
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li{
+                &:not(:last-of-type){
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &:not(:last-of-type){
+            margin-bottom: 24px;
+        }
+    }
+}

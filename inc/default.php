@@ -22,7 +22,7 @@ function page_navigation(){
     $args['prev_text'] = 'Prev';
     $args['next_text'] = 'Next';
     if($max > 1) echo '
-        <div class="page_navigation">';
+        <div class="page_navigation shade_box">';
         if($total == 1 && $max > 1) $pages = '<p class= "pages"> Page ' . $current . '<span> of </span>' . $max . '</p>';
         echo $pages . paginate_links($args);
     if($max > 1) echo ' 

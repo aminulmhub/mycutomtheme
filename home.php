@@ -1,5 +1,5 @@
 <?php 
-    // Archive Template file
+    // Blog archive Template file
 
     get_header(); ?>
 
@@ -12,7 +12,7 @@
                     <div class="col-lg-12">
                         <div class="section-title text-center ">
                             <span class="subtitle">Visit my blog and keep your feedback</span>
-                            <h2 class="title">Blog Category</h2>
+                            <h2 class="title">My Blog</h2>
                         </div>
                     </div>
                 </div>

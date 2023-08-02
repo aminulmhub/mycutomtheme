@@ -14,7 +14,9 @@ get_header(); ?>
                 </div>
                 <!-- sidebar -->
                 <div class="col-lg-3">
-
+                    <aside class="sidebar">
+                        <?php get_sidebar(); ?>
+                    </aside>
                 </div>
             </div>
         </div>

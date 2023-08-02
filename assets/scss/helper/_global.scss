@@ -10,6 +10,11 @@ body {
     a {
         text-decoration: none;
         transition: $transition;
+        color: $color_dark;
+
+        &:hover{
+            color: $color_primary;
+        }
     }
 
     img {

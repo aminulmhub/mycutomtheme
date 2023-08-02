@@ -6,6 +6,8 @@
 
     <!-- Start Main Content -->
     <main>
+        <!-- Hero -->
+        <?php get_template_part('template-parts/hero'); ?>
 
     </main>
     <!-- End Main Content -->
