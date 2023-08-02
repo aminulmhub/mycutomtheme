@@ -7,7 +7,7 @@
 add_theme_support('title-tag');
 
 // post-thumbnails
-add_theme_support('post-thumbnails', array('page', 'post'));
+add_theme_support('post-thumbnails', array('page', 'post', 'feature'));
 
 // page navigation
 function page_navigation(){

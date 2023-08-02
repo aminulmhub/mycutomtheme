@@ -1,5 +1,5 @@
 <?php 
-    // Archive Template file
+    // search Template file
 
     get_header(); ?>
 
@@ -11,8 +11,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title text-center ">
-                            <span class="subtitle">Visit my blog and keep your feedback</span>
-                            <h2 class="title"><?php the_archive_title(); ?></h2>
+                            <span class="subtitle">Search result for</span>
+                            <h2 class="title"><?php printf(__('%s', 'textdomain'), get_search_query()); ?></h2>
                         </div>
                     </div>
                 </div>

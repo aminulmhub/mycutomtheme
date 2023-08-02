@@ -120,6 +120,10 @@
                                 line-height: 1;
                                 font-weight: 600;
                                 margin: 5px 10px;
+
+                                &:hover{
+                                    color: $color_primary;
+                                }
                             }
 
                             .mm-trigger {

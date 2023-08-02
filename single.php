@@ -7,7 +7,7 @@ get_header(); ?>
 <main>
     <section class="section-gap">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 <!-- page content -->
                 <div class="col-lg-9">
                     <?php get_template_part('template-parts/single_post'); ?>

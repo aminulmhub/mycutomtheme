@@ -382,6 +382,9 @@ label {
   font-weight: 600;
   margin: 5px 10px;
 }
+.template-header .template-navigation .template-menu .nav-menu .main-menu ul li a:hover {
+  color: #ff014f;
+}
 .template-header .template-navigation .template-menu .nav-menu .main-menu ul li .mm-trigger {
   display: none;
 }

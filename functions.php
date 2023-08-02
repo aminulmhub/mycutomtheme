@@ -21,3 +21,6 @@ include_once('inc/date_time.php');
 // widget register
 include_once('inc/widget_register.php');
 
+// custom post type
+include_once('inc/custom_post.php');
+
