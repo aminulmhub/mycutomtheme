@@ -9,6 +9,8 @@
         <!-- Hero -->
         <?php get_template_part('template-parts/hero'); ?>
 
+        <!-- Feature -->
+        <?php get_template_part('template-parts/feature'); ?>
     </main>
     <!-- End Main Content -->
 

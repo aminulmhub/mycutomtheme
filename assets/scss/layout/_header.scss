@@ -38,6 +38,7 @@
             &.active {
                 visibility: visible;
                 opacity: 1;
+                z-index: 5;
             }
         }
 
@@ -220,7 +221,9 @@
                     padding: 0;
                     -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
                     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                     overflow-x: hidden;
                     overflow-y: scroll;
 

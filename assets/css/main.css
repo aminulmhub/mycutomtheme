@@ -320,6 +320,7 @@ label {
 .template-header .template-navigation .nav-overlay.active {
   visibility: visible;
   opacity: 1;
+  z-index: 5;
 }
 .template-header .template-navigation .template-menu {
   display: -webkit-box;
@@ -453,7 +454,9 @@ label {
   padding: 0;
   -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -751,7 +754,6 @@ label {
   height: 100%;
   padding: 35px 50px;
   border-radius: 10px;
-  cursor: pointer;
   transition: 0.4s;
 }
 .feature .feature_item .inner .icon {
@@ -779,19 +781,6 @@ label {
 .feature .feature_item .inner .content .read-more-button {
   color: #ff014f;
   font-size: 32px;
-}
-.feature .feature_item:hover, .feature .feature_item:active {
-  background: linear-gradient(145deg, #ff014f, #d11414);
-  color: #fff;
-}
-.feature .feature_item:hover .inner .icon svg, .feature .feature_item:active .inner .icon svg {
-  color: #fff;
-}
-.feature .feature_item:hover .inner .content .title a, .feature .feature_item:active .inner .content .title a {
-  color: #fff;
-}
-.feature .feature_item:hover .inner .content .read-more-button, .feature .feature_item:active .inner .content .read-more-button {
-  color: #fff;
 }
 @media only screen and (max-width: 575px) {
   .feature .feature_item {
