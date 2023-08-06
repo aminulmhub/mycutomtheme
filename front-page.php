@@ -11,6 +11,10 @@
 
         <!-- Feature -->
         <?php get_template_part('template-parts/feature'); ?>
+
+        <!-- Portfolio -->
+        <?php get_template_part('template-parts/portfolio'); ?>
+
     </main>
     <!-- End Main Content -->
 
