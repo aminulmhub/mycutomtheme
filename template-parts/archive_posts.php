@@ -5,26 +5,18 @@
     ?>
             <!-- Start Single blog -->
             <div class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 ">
-                <div class="blog_item shade_box">
-                    <div class="inner">
-                        <div class="thumbnail">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail(); ?>
-                            </a>
+                <div class="post-card shade_box">
+                    <a class="post-card__thumbnail" href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail(); ?>
+                    </a>
+                    <div class="post-card__content">
+                        <div class="post-card__info">
+                            <?php the_category(); ?>
                         </div>
-                        <div class="content">
-                            <div class="category-info">
-                                <div class="category-list">
-                                    <?php the_category(); ?>
-                                </div>
-                            </div>
-                            <h4 class="title">
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_title(); ?>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </h4>
-                        </div>
+                        <a class="post-card__title" href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>

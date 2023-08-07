@@ -3,24 +3,21 @@
 ?>
         <!-- Start Single blog -->
         <div class="col-12 ">
-            <div class="blog_item shade_box">
-                <div class="inner">
-                    <div class="thumbnail">
-                        <?php the_post_thumbnail(); ?>
+            <div class="post-card shade_box">
+                <div class="post-card__thumbnail">
+                    <?php the_post_thumbnail(); ?>
+                </div>
+                <div class="post-card__content">
+                    <div class="post-card__info">
+                        <?php the_category(); ?>
                     </div>
-                    <div class="content">
-                        <div class="category-info">
-                            <div class="category-list">
-                                <?php the_category(); ?>
-                            </div>
-                        </div>
-                        <h4 class="title">
-                            <?php the_title(); ?>
-                        </h4>
-                    </div>
-                    <div class="post_description">
-                        <?php the_content(); ?>
-                    </div>
+                    <a class="post-card__title" href="<?php the_permalink(); ?>">
+                        <?php the_title(); ?>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="post-card__description">
+                    <?php the_content(); ?>
                 </div>
             </div>
         </div>

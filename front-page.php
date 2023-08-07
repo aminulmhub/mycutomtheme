@@ -15,6 +15,9 @@
         <!-- Portfolio -->
         <?php get_template_part('template-parts/portfolio'); ?>
 
+        <!-- Clients -->
+        <?php get_template_part('template-parts/clients'); ?>
+
     </main>
     <!-- End Main Content -->
 
