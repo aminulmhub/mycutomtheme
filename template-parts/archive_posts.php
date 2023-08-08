@@ -24,7 +24,7 @@
     <?php
         endwhile;
     else :
-        _e('No Post Found!');
+        _e('No Post Found!', 'textdomain');
     endif;
     ?>
 </div>

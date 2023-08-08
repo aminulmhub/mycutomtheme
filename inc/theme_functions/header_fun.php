@@ -6,7 +6,7 @@ $wp_customize->add_section('header_area', array(
 ));
 // logo
 $wp_customize->add_setting('header_logo', array(
-    'default' => get_bloginfo('template_directory') . '/assets/images/logo/logo-dark.png'
+    'default' => get_template_directory_uri('template_directory') . '/assets/images/logo/logo-dark.png'
 ));
 $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'header_logo', array(
     'label' => 'Upload logo',

@@ -12,7 +12,7 @@
 
                 <div class="row g-4 g-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-3 mt-2 mt-lg-3">
                     <?php
-                    query_posts('post_type=portfolio&post_status=publish&posts_per_page=6&order=ASC&paged=' .
+                    query_posts('post_type=portfolio&post_status=publish&posts_per_page=3&order=ASC&paged=' .
                         get_query_var('post'));
 
                     if (have_posts()) :
@@ -43,6 +43,9 @@
                     endif;
                     ?>
 
+                </div>
+                <div class="d-flex align-items-center justify-content-center mt-5">
+                    <a class="btn btn_primary shade_box" href="/portfolio">All Portfolio</a>
                 </div>
             </div>
         </section>
